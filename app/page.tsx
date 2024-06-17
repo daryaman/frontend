@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import ImgHero from '../assets/images/pexels-pixabay-221027.jpg'
 import MainHeader from "./(web)/partials/header";
 import WebFooter from "./(web)/partials/footer";
+import Navbar from "./(web)/partials/navbar";
 
 export default function Home() {
   // redirect('/post')
@@ -11,7 +12,7 @@ export default function Home() {
       <div className='grid grid-cols-1 justify-items-center'>
         <MainHeader />
       </div>
-      <div className='grid grid-cols-1 justify-items-center bg-slate-950 py-5 mt-16'>
+      <div className='grid grid-cols-1 justify-items-center bg-slate-950 py-5'>
         <main className='w-10/12 max-w-4xl'>
           <Image
             src={ImgHero}
