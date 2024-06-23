@@ -23,6 +23,16 @@ const Page = () => {
     const submitForm = event => {
         event.preventDefault()
 
+        // Get form elements by ID
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+
+        // Access and log the values
+        const name = nameInput.value;
+        const email = emailInput.value;
+        console.log(`Name: ${name}, Email: ${email}`);
+
+
         register({
             name,
             email,

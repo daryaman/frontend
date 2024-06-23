@@ -1,22 +1,21 @@
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import ImgHero from '../assets/images/pexels-pixabay-221027.jpg'
-import MainHeader from "./(web)/partials/header";
 import WebFooter from "./(web)/partials/footer";
-import Navbar from "./(web)/partials/navbar";
+import WebHeader from "./(web)/partials/header";
 
 export default function Home() {
   // redirect('/post')
   return (
     <div className='bg-slate-900 text-slate-200 tracking-wide'>
-      <div className='grid grid-cols-1 justify-items-center'>
-        <MainHeader />
+      <div className='grid grid-cols-1 justify-items-center fixed bg-slate-900 w-full'>
+        <WebHeader />
       </div>
-      <div className='grid grid-cols-1 justify-items-center bg-slate-950 py-5'>
+      <div className='grid grid-cols-1 justify-items-center bg-slate-950 py-5 pt-[5.5rem]'>
         <main className='w-10/12 max-w-4xl'>
           <Image
             src={ImgHero}
-            alt="Picture of the author"
+            alt="Macro work"
           />
           <h1 className="text-4xl mt-5 mb-1">Welcome</h1>
           <div className="text-sm text-slate-500 mb-3">Written by : Admin</div>

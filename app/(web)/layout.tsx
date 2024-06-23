@@ -9,15 +9,17 @@ interface Props {
 
 function webLayout({ children }: Props) {
   return (
-    <div className='bg-slate-900 text-slate-200'>
-      <div className='grid grid-cols-1 justify-items-center'>
-          <MainHeader />
+    <div className='bg-slate-900 text-slate-200 tracking-wide'>
+      <div className='grid grid-cols-1 justify-items-center fixed bg-slate-900 w-full'>
+        <MainHeader />
       </div>
-      <div className='grid grid-cols-1 justify-items-center bg-slate-950 py-5'>
-          <main className='w-10/12'>{children}</main>
+      <div className='grid grid-cols-1 justify-items-center bg-slate-950 py-5 pt-[5.5rem]'>
+        <main className='w-10/12 max-w-4xl'>
+          { children }
+        </main>
       </div>
       <div className='grid grid-cols-1 justify-items-center'>
-          <WebFooter />
+        <WebFooter />
       </div>
 
     </div>

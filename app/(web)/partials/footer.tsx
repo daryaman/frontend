@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 const WebFooter = () => {
@@ -11,8 +12,8 @@ const WebFooter = () => {
       </ul>
       <ul className='flex flex-col space-y-1'>
         <li>News</li>
-        <li>Login</li>
-        <li>Register</li>
+        <li><Link href={'/login'}>Login</Link></li>
+        <li><Link href={'/register'}>Register</Link></li>
       </ul>
     </div>
   )

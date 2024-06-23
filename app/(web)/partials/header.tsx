@@ -6,7 +6,7 @@ import IcoAgent from '../../../assets/icons/real_estate_agent.svg'
 import IcoMenu from '../../../assets/icons/menu.svg'
 import Link from 'next/link'
 
-const MainHeader = () => {
+const WebHeader = () => {
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -16,12 +16,12 @@ const MainHeader = () => {
 
         <div className='flex flex-row'>
 
-          <h1 className='font-extrabold mr-3'>DARYAMAN</h1>
           <Image
             src={IcoAgent}
             alt="Picture of the author"
             className=''
           />
+          <h1 className='font-extrabold ml-3'>DARYAMAN</h1>
         </div>
 
         <button
@@ -38,22 +38,22 @@ const MainHeader = () => {
       </div>
 
       {/* At small screen with togler */}
-      <div className={`${isOpen ? 'flex' : 'hidden'} bg-slate-900`}>
+      <div className={`${isOpen ? 'flex' : 'hidden'} transition ease-in-out`}>
         <ul className='flex flex-col mt-5 space-y-3 md:flex-row md:space-x-3 md:space-y-0 md:mt-0'>
-          <li className='md:px-2'>Home</li>
-          <li className='md:px-2'>Portfolio</li>
-          <li className='md:px-2'>About</li>
-          <li className='md:px-2'>Contact</li>
+          <li className='md:px-2'><Link href={'/'}>Home</Link></li>
+          <li className='md:px-2'><Link href={'/post'}>Post</Link></li>
+          <li className='md:px-2'><Link href={'/about'}>About</Link></li>
+          <li className='md:px-2'><Link href={'/contact'}>Contact</Link></li>
         </ul>
       </div>
 
       {/* Show at medium screen */}
       <div className='hidden md:flex'>
         <ul className='flex flex-col mt-5 space-y-3 md:flex-row md:space-x-3 md:space-y-0 md:mt-0'>
-          <li className='md:px-2'>Home</li>
-          <li className='md:px-2'>Portfolio</li>
-          <li className='md:px-2'>About</li>
-          <li className='md:px-2'>Contact</li>
+        <li className='md:px-2'><Link href={'/'}>Home</Link></li>
+          <li className='md:px-2'><Link href={'/post'}>Post</Link></li>
+          <li className='md:px-2'><Link href={'/about'}>About</Link></li>
+          <li className='md:px-2'><Link href={'/contact'}>Contact</Link></li>
         </ul>
       </div>
 
@@ -61,4 +61,4 @@ const MainHeader = () => {
   )
 }
 
-export default MainHeader
+export default WebHeader

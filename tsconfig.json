@@ -21,6 +21,14 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts", 
+    "**/*.ts", 
+    "**/*.tsx", 
+    ".next/types/**/*.ts", 
+    "components/Input.tsx", 
+    "components/Button.js", 
+    "components/Label.js", 
+    "components/InputError.js"],
   "exclude": ["node_modules"]
 }
